@@ -22,6 +22,8 @@ let newHtml = htmlTmp.replace('<!--app-->',AppString)
 // console.log('newHtml==',newHtml)
 
 
+
+
 app.use('/public',express.static(path.join(__dirname,'../../dist')))
 app.get('/',(res,req) => {
     req.send(newHtml)
